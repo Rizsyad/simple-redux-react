@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addPost } from "../../redux/slice/postSlice";
 import {
   FormControl,
@@ -18,7 +18,6 @@ const AddPost = () => {
   const [loading, setLoading] = useBoolean();
 
   // get posts in redux
-  const posts = useSelector((state) => state.post.contents);
   const dispatch = useDispatch();
 
   // handle change events
